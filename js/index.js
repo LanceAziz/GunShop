@@ -48,12 +48,9 @@ function diaplayProduct(products) {
                     </div>
                     <!-- Buttons -->
                     <div class="d-flex justify-content-center my-4">
-                        <button type="button" class="btn btn-primary px-4 py-2 fs-6 rounded-0 skew"><i
-                                class="fa-solid fa-cart-plus"></i></button>
-                        <button type="button" class="btn btn-primary px-4 py-2 fs-6 rounded-0 skew"><i
-                                class="fa-solid fa-cart-arrow-down"></i></button>
-                        <button type="button" class="btn btn-primary px-4 py-2 fs-6 rounded-0 skew"><i
-                                class="fa-solid fa-circle-info"></i></button>
+                        <i class="fa-solid fa-cart-plus fs-3 px-2"></i>
+                        <i class="fa-solid fa-cart-arrow-down fs-3 px-2"></i>
+                        <i class="fa-solid fa-circle-info fs-3 px-2"></i>
                     </div>
                 </div>
             </div>`
