@@ -3,7 +3,7 @@ document.getElementById("nav-placeholder").innerHTML = `
 <div class="container-fluid">
         <!-- Logo -->
         <div class="navbar-nav me-2">
-            <a href="index.html"><i class="fa-solid fa-pencil px-2 py-2 fs-5 rounded-0 skew"></i></a>
+            <a href="index.html"><i class="fa-solid fa-gun px-2 py-2 fs-5 rounded-0 skew"></i></a>
         </div>
         <!-- Navigation Tabs -->
         <ul class="navbar-nav m-auto">
