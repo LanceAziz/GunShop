@@ -43,7 +43,7 @@ function diaplayProduct(products) {
                     </div>
                     <!-- Details -->
                     <div class="my-2">
-                        <h3>${products[i].title}</h3>
+                        <h3>${stringTrimmer(products[i].title)}</h3>
                         <h4>${products[i].vote_average}</h4>
                     </div>
                     <!-- Buttons -->
@@ -56,4 +56,12 @@ function diaplayProduct(products) {
             </div>`
     }
     document.getElementById('products').innerHTML = temp;
+}
+
+//Trims The Product Name So Its not too Long
+function stringTrimmer(str){
+    if(str.length > 28){
+        str = `${str.slice(0, 28)}...`;
+    }
+    return str;
 }
