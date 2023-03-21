@@ -74,7 +74,7 @@ h3{
 h4{
     font-size: medium;
 }
-i:hover{
-    color: #0d6dfd;
+i:hover, .nav-link:hover{
+    color: #0d6dfd !important;
     transition: 0.5s;
 }
