@@ -24,31 +24,27 @@ document.getElementById("nav-placeholder").innerHTML = `
             <i class="fa-solid fa-user-plus px-2 py-2 fs-5 rounded-0 skew"></i>
         </div>
     </div>`;
-var myHttp = new XMLHttpRequest();
-var myMovies = [];
-myHttp.open('GET', 'https://api.themoviedb.org/3/trending/movie/week?api_key=713e5b505cc52f5aa68161a6f9c471c1');
-myHttp.send();
-myHttp.addEventListener('readystatechange', function () {
-    if (myHttp.status == 200 && myHttp.readyState == 4) {
-        myMovies = JSON.parse(myHttp.response).results;
-        console.log(myMovies);
-        diaplayMovies()
-    }
-});
-function diaplayMovies() {
+// API
+(async function getProducts(){
+    var response = await fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=713e5b505cc52f5aa68161a6f9c471c1`);
+    var finalResponse = await response.json();
+    diaplayProduct(finalResponse.results);
+    console.log(products);
+})()
+function diaplayProduct(products) {
     var temp = ``;
-    for (let i = 0; i < myMovies.length; i++) {
+    for (let i = 0; i < products.length; i++) {
         temp += `
             <div class="col-3 py-2">
                 <div class="text-center border-grad">
                     <!-- Picture -->
                     <div class="text-center p-3">
-                        <img class="w-100" src="https://image.tmdb.org/t/p/w500/${myMovies[i].poster_path}">
+                        <img class="w-100" src="https://image.tmdb.org/t/p/w500/${products[i].poster_path}">
                     </div>
                     <!-- Details -->
                     <div class="my-2">
-                        <h3>${myMovies[i].title}</h3>
-                        <h4>${myMovies[i].vote_average}</h4>
+                        <h3>${products[i].title}</h3>
+                        <h4>${products[i].vote_average}</h4>
                     </div>
                     <!-- Buttons -->
                     <div class="d-flex justify-content-center my-4">

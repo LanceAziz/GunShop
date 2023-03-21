@@ -48,7 +48,7 @@ body {
 .skew {
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
-/* Header */
+/* Section 1 */
 header {
     background-image: url(../Images/Cover.jpg);
     background-size: cover;
@@ -56,18 +56,20 @@ header {
 .cover {
     background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.5));
 }
-/* Products */
+/* Section 2 */
+.cus-table td{
+    padding: 0 10px;
+}
+/* Section 4 */
 .border-grad{
     border-width: 3px;
     border-style: solid;
     border-image: linear-gradient(45deg,#0d6dfd,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0), rgb(13, 110, 253)) 1;
 }
 h3{
-    font-size: 15;
+    font-size: 25;
+    height: 70px;
 }
 h4{
     font-size: medium;
-}
-.cus-table td{
-    padding: 0 10px;
 }
