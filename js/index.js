@@ -51,8 +51,8 @@ function diaplayProduct(products) {
                     </div>
                     <!-- Details -->
                     <div class="my-2">
-                        <h3>${stringTrimmer(products[i].title)}</h3>
-                        <h4>${products[i].vote_average}</h4>
+                        <h3 class="Prd-Title">${stringTrimmer(products[i].title)}</h3>
+                        <h4 class="prd-Price">${products[i].vote_average}</h4>
                     </div>
                     <!-- Buttons -->
                     <div class="d-flex justify-content-center my-4">
