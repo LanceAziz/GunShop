@@ -1,86 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gunify</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/all.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Nav Bar -->
-    <nav
-      id="nav-placeholder" class="position-fixed w-100 bg-black"></nav>
-    <div class="container">
-      <div class="row vh-100 justify-content-center align-items-center">
-        <div class="col-md-4">
-          <div class="d-flex justify-content-center">
-            <img
-              src="https://cdn.shopify.com/s/files/1/0467/4568/2079/products/shop-9_2000x.jpg?v=1600847835"
-              class="w-75"
-              alt=""
-            />
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gunify</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Nav Bar -->
+  <nav id="nav-placeholder" class="position-fixed w-100 bg-black"></nav>
+  <div class="container">
+    <div class="row vh-100 justify-content-center align-items-center g-0">
+      <div class="col-md-4">
+        <div class="d-flex justify-content-center">
+          <img src="https://cdn.shopify.com/s/files/1/0467/4568/2079/products/shop-9_2000x.jpg?v=1600847835"
+            class="w-75" alt="" />
         </div>
-        <div class="col-md-8 p-5 border-start border-primary">
-          <div>
-            <h2 class="fa-3x">Product Name</h2>
-            <h4 class="text-success fs-4">Product Price</h4>
-            <p class="alert alert-primary">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
-              laboriosam expedita temporibus nesciunt provident nemo odit
-              laborum recusandae quibusdam ullam. Deserunt suscipit quas
-              nesciunt hic, earum consequuntur placeat optio nam, quisquam
-              ducimus, quibusdam expedita aliquid impedit minus architecto
-              perferendis ea error natus
-            </p>
-            <div class="attr row justify-content-start">
-              <div class="col-md-4">
-                <div class="d-flex justify-content-between border-top">
-                  <p>Type: </p> 
-                  <p class="text-primary">Rifle</p>
+      </div>
+      <div class="col-md-8 p-5 border-start border-white border-3 border-grad">
+        <div>
+          <h2 class="fa-3x">Product Name</h2>
+          <h4 class="text-primary fs-4 pb-4">Product Price</h4>
+          <div class="attr row justify-content-start">
+            <div class="col-md-4">
+              <div class="d-flex justify-content-between">
+                <p>Type: </p>
+                <p class="text-primary ">Rifle</p>
+              </div>
+              <div class="d-flex justify-content-between">
+                <p>Caliber: </p>
+                <p class="text-primary ">9mm</p>
+              </div>
+              <div class="gun">
+                <div class="d-flex justify-content-between">
+                  <p>Capacity: </p>
+                  <p class="text-primary ">12</p>
                 </div>
-                <div class="d-flex justify-content-between border-top">
-                  <p>Caliber: </p> 
-                  <p class="text-primary">9mm</p>
+                <div class="d-flex justify-content-between">
+                  <p>Action: </p>
+                  <p class="text-primary ">Burst</p>
                 </div>
-                <div class="gun">
-                  <div class="d-flex justify-content-between border-top">
-                    <p>Capacity: </p> 
-                    <p class="text-primary">12</p>
-                  </div>
-                  <div class="d-flex justify-content-between border-top">
-                    <p>Action: </p> 
-                    <p class="text-primary">Burst</p>
-                  </div>   
-                </div>
-                <!-- <div class="ammo">
+              </div>
+              <!-- <div class="ammo">
                     <p>Rounds: <span class="p-2">50</span></p>
-                </div> -->  
-  
+                </div> -->
+              <div class="cart">
+                <div class="d-flex justify-content-between">
+                  <label for="quantity">Quantity:</label>
+                  <input type="number" name="quantity" id="quantity"
+                    class="text-primary rounded border-white b-qty w-qty text-center bg-black" min="1" max="99"
+                    maxlength="1" />
+                </div>
               </div>
             </div>
-            <div class="cart">
-              <label class="p-2" for="quantity">Quantity:</label>
-              <input type="number" name="quantity" id="quantity" class="text-primary rounded border-white w-qty text-center bg-black" min="1" max="99" maxlength="1" />
-              <br><br>
-              <button class="btn border-start-0 border-end-0 rounded-0 btn-outline-primary fa-sm py-3 px-4 w-100">Add To Cart</button>  
-          </div>
-
+            <p class="py-3">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam maiores facere maxime deserunt sapiente
+              velit numquam sit, inventore excepturi error vel tenetur eveniet illo facilis assumenda adipisci quos
+              aliquid itaque reiciendis voluptas nemo cumque quis, minima natus. Nostrum sapiente aliquam quia omnis?
+              Eos officia at quasi nulla cupiditate ut, adipisci temporibus laborum earum autem nihil quia est animi
+              sit? Laborum perferendis omnis cupiditate praesentium rem placeat maxime sapiente ratione? Pariatur nam
+              laborum iste, explicabo, sequi facilis sit unde rem facere cum ex, quos voluptate exercitationem harum
+              nulla vel nostrum esse quaerat consequuntur hic temporibus nobis asperiores. Laborum dignissimos omnis,
+              consequatur dolores possimus nam, eum, sed adipisci repellendus provident quod! Atque,
+            </p>
+            <button class="btn border-start-0 border-end-0 rounded-0 btn-primary fa-sm py-3 px-4 w-100">Add
+              To
+              Cart</button>
           </div>
         </div>
       </div>
     </div>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="js/index.js"></script>
-  </body>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
 </html>

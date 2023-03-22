@@ -93,7 +93,9 @@ header {
 .prd-Price{
     font-size: medium;
 }
-
 .w-qty{
     width: 50px;
+}
+.b-qty{
+    border-width: 1px;
 }
