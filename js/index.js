@@ -22,6 +22,7 @@ document.getElementById("nav-placeholder").innerHTML = `
                 </ul>
                 <div class="d-flex justify-content-center">
                     <i class="fa-solid fa-cart-shopping p-2 fs-5 rounded-0 cart-ani"></i>
+                    <i class="fa-solid fa-user-tie p-2 fs-5 rounded-0"></i>
                     <button class="btn border-start-0 border-end-0 rounded-0 btn-primary fa-sm px-4">Sign In</button>
                     <button class="btn border-start-0 border-end-0 rounded-0 btn-primary fa-sm px-4">Sign Up</button>
                 </div>
