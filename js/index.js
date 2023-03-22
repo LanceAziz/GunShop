@@ -1,29 +1,33 @@
 // Nav Bar
 document.getElementById("nav-placeholder").innerHTML = `
-<div class="container-fluid">
-        <!-- Logo -->
-            <div class="col-4 navbar-nav">
-                <a href="index.html"><i class="fa-solid fa-person-rifle px-2 py-2 fs-5 rounded-0 skew"></i></a>
+<nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a href="index.html"><i class="fa-solid fa-person-rifle px-2 py-2 fs-5 rounded-0">Gunify</i></a>
+            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" aria-current="page" href="index.html #Home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html #About-Us">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html #Categories">Categories</a>
+                    </li>
+                </ul>
+                <div class="d-flex justify-content-center">
+                    <i class="fa-solid fa-cart-shopping p-2 fs-5 rounded-0 cart-ani"></i>
+                    <button class="btn skew rounded-0 btn-primary fa-sm px-4">Sign In</button>
+                    <button class="btn skew rounded-0 btn-primary fa-sm px-4">Sign Up</button>
+                </div>
             </div>
-        <!-- Navigation Tabs -->
-            <ul class="navbar-nav m-auto col-4 d-flex justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link text-white" aria-current="page" href="index.html #Home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="index.html #About-Us">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="index.html #Categories">Categories</a>
-                </li>
-            </ul>
-        <!-- Cart & Athuntication -->
-            <div class="navbar-nav col-4 d-flex justify-content-end">
-                <i class="fa-solid fa-cart-shopping p-2 fs-5 rounded-0 cart-ani"></i>
-                <button class="btn skew rounded-0 btn-primary fa-sm px-4">Sign In</button>
-                <button class="btn skew rounded-0 btn-primary fa-sm px-4">Sign Up</button>
-             </div>
-    </div>`;
+        </div>
+    </nav>`;
 // API
 (async function getProducts(){
     var response = await fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=713e5b505cc52f5aa68161a6f9c471c1`);

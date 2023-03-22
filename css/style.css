@@ -64,6 +64,9 @@ i:hover, .nav-link:hover{
     color: #f0ad4e !important;
     transition: 0.5s;
 }
+#nav-placeholder{
+    z-index: 99;
+}
 /* Section 1 */
 header {
     background-image: url(../Images/Cover.jpg);
