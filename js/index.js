@@ -2,14 +2,11 @@
 document.getElementById("nav-placeholder").innerHTML = `
 <div class="container-fluid">
         <!-- Logo -->
-        <div class="col-4">
-            <div class="navbar-nav">
+            <div class="col-4 navbar-nav">
                 <a href="index.html"><i class="fa-solid fa-person-rifle px-2 py-2 fs-5 rounded-0 skew"></i></a>
             </div>
-        </div>
         <!-- Navigation Tabs -->
-        <div class="col-4">
-            <ul class="navbar-nav m-auto">
+            <ul class="navbar-nav m-auto col-4 d-flex justify-content-center">
                 <li class="nav-item">
                     <a class="nav-link text-white" aria-current="page" href="index.html #Home">Home</a>
                 </li>
@@ -20,15 +17,12 @@ document.getElementById("nav-placeholder").innerHTML = `
                     <a class="nav-link text-white" href="index.html #Categories">Categories</a>
                 </li>
             </ul>
-        </div>
         <!-- Cart & Athuntication -->
-        <div class="col-4">
-            <div class="navbar-nav">
+            <div class="navbar-nav col-4 d-flex justify-content-end">
                 <i class="fa-solid fa-cart-shopping px-2 py-2 fs-5 rounded-0 skew"></i>
                 <i class="fa-solid fa-right-to-bracket px-2 py-2 fs-5 rounded-0 skew"></i>
                 <i class="fa-solid fa-user-plus px-2 py-2 fs-5 rounded-0 skew"></i>
              </div>
-        </div>    
     </div>`;
 // API
 (async function getProducts(){
@@ -43,9 +37,13 @@ function diaplayProduct(products) {
         temp += `
             <div class="col-3 py-2">
                 <div class="text-center border-grad">
+                    <div class="d-flex justify-content-end p-2">
+                        <i class="fa-solid fa-pen fs-6 px-2 edit-ani"></i>
+                        <i class="fa-solid fa-trash fs-6 px-2 trash-ani"></i>
+                    </div>
                     <!-- Picture -->
-                    <div class="text-center p-3">
-                        <img class="w-100" src="https://image.tmdb.org/t/p/w500/${products[i].poster_path}">
+                    <div class="text-center px-3 pt-1 pb-3">
+                        <img class="w-100" src="https://image.tmdb.org/t/p/w500/${products[i].poster_path}" alt="Images/Product_Default.png">
                     </div>
                     <!-- Details -->
                     <div class="my-2">

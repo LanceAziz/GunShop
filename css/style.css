@@ -32,7 +32,7 @@ body {
     font-family: 'Audiowide', cursive;
     font-weight: 500;
     text-transform: capitalize;
-    padding: 0 80px;
+    padding: 0 60px;
     margin: 40 0;
 }
 .sub-title h2::before {
@@ -40,7 +40,7 @@ body {
     position: absolute;
     left: 0;
     top: 5px;
-    width: 70px;
+    width: 50px;
     bottom: 5px;
     background: #0d6efd;
     clip-path: polygon(0 0, 100% 0, 50% 100%, 0% 100%);
@@ -76,5 +76,13 @@ h4{
 }
 i:hover, .nav-link:hover{
     color: #0d6dfd !important;
+    transition: 0.5s;
+}
+.trash-ani:hover{
+    color: #dc3545 !important;
+    transition: 0.5s;
+}
+.edit-ani:hover{
+    color: #198754 !important;
     transition: 0.5s;
 }
