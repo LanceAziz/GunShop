@@ -35,7 +35,7 @@ function diaplayProduct(products) {
     var temp = ``;
     for (let i = 0; i < products.length; i++) {
         temp += `
-            <div class="col-3 py-2">
+            <div class="col-lg-3 col-md-4 col-sm-6 py-2">
                 <div class="text-center border-grad">
                     <div class="d-flex justify-content-end p-2">
                         <i class="fa-solid fa-pen fs-6 px-2 edit-ani"></i>
