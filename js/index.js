@@ -61,7 +61,6 @@ function diaplayProduct(products) {
     }
     document.getElementById('products').innerHTML = temp;
 }
-
 //Trims The Product Name So Its not too Long
 function stringTrimmer(str){
     if(str.length > 28){

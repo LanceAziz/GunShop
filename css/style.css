@@ -48,6 +48,18 @@ body {
 .skew {
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
+i:hover, .nav-link:hover{
+    color: #0d6dfd !important;
+    transition: 0.5s;
+}
+.trash-ani:hover{
+    color: #dc3545 !important;
+    transition: 0.5s;
+}
+.edit-ani:hover{
+    color: #198754 !important;
+    transition: 0.5s;
+}
 /* Section 1 */
 header {
     background-image: url(../Images/Cover.jpg);
@@ -73,16 +85,4 @@ h3{
 }
 h4{
     font-size: medium;
-}
-i:hover, .nav-link:hover{
-    color: #0d6dfd !important;
-    transition: 0.5s;
-}
-.trash-ani:hover{
-    color: #dc3545 !important;
-    transition: 0.5s;
-}
-.edit-ani:hover{
-    color: #198754 !important;
-    transition: 0.5s;
 }
