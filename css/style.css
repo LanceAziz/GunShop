@@ -46,7 +46,7 @@ body {
     clip-path: polygon(0 0, 100% 0, 50% 100%, 0% 100%);
 }
 .skew {
-    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    clip-path: polygon(20% 0, 100% 0%, 80% 100%, 0% 100%);
 }
 i:hover, .nav-link:hover{
     color: #0d6dfd !important;
@@ -58,6 +58,10 @@ i:hover, .nav-link:hover{
 }
 .edit-ani:hover{
     color: #198754 !important;
+    transition: 0.5s;
+}
+.cart-ani:hover{
+    color: #f0ad4e !important;
     transition: 0.5s;
 }
 /* Section 1 */

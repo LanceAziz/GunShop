@@ -19,9 +19,9 @@ document.getElementById("nav-placeholder").innerHTML = `
             </ul>
         <!-- Cart & Athuntication -->
             <div class="navbar-nav col-4 d-flex justify-content-end">
-                <i class="fa-solid fa-cart-shopping px-2 py-2 fs-5 rounded-0 skew"></i>
-                <i class="fa-solid fa-right-to-bracket px-2 py-2 fs-5 rounded-0 skew"></i>
-                <i class="fa-solid fa-user-plus px-2 py-2 fs-5 rounded-0 skew"></i>
+                <i class="fa-solid fa-cart-shopping p-2 fs-5 rounded-0 cart-ani"></i>
+                <button class="btn skew rounded-0 btn-primary fa-sm px-4">Sign In</button>
+                <button class="btn skew rounded-0 btn-primary fa-sm px-4">Sign Up</button>
              </div>
     </div>`;
 // API
