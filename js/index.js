@@ -21,8 +21,8 @@ document.getElementById("nav-placeholder").innerHTML = `
                     </li>
                 </ul>
                 <div class="d-flex justify-content-center ">
-                    <div class="d-flex position-relative bg-danger">
-                        <i class="fa-solid fa-cart-shopping p-2 pe-4 fs-5 rounded-0 cart-ani"><span class="position-absolute top-0 start-50 translate-middle badge border border-light rounded-circle bg-danger p-2"><span class="visually-hidden">unread messages</span></span></i>
+                    <div class="d-flex position-relative">
+                        <i class="fa-solid fa-cart-shopping p-2 pe-4 fs-5 rounded-0 cart-ani"><span class="position-absolute top-0 start-50  badge border border-light rounded-circle bg-danger p-1"><span class="visually-hidden">unread messages</span></span></i>
                         </div>
                     <button class="btn border-start-0 border-end-0 rounded-0 btn-primary fa-sm px-4">Log Out</button>
                     <button class="btn border-start-0 border-end-0 rounded-0 btn-primary fa-sm px-4">Sign In</button>
