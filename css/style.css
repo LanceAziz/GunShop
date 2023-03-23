@@ -69,9 +69,6 @@ i:hover, .nav-link:hover{
     border-image: linear-gradient(90deg,rgba(0, 0, 0, 0), rgb(255, 255, 255)) 1 !important;
     transition: 0.5s;
 }
-#nav-placeholder{
-    z-index: 99;
-}
 /* Section 1 */
 header {
     background-image: url(../Images/Cover.jpg);
@@ -114,4 +111,14 @@ header {
     border-style: solid;
     border-image: linear-gradient(90deg,rgba(0, 0, 0, 0), rgb(13, 110, 253)) 1;
     background-color: #000;
+}
+.cart-items{
+    z-index: 99;
+    position: fixed;
+    padding: 10px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 80%;
+    background-color: #d01616;
 }
