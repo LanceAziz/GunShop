@@ -64,6 +64,11 @@ i:hover, .nav-link:hover{
     color: #f0ad4e !important;
     transition: 0.5s;
 }
+.add-ani:hover{
+    color: #0d6dfd !important;
+    border-image: linear-gradient(90deg,rgba(0, 0, 0, 0), rgb(255, 255, 255)) 1 !important;
+    transition: 0.5s;
+}
 #nav-placeholder{
     z-index: 99;
 }
@@ -98,4 +103,15 @@ header {
 }
 .b-qty{
     border-width: 1px;
+}
+.add-btn{
+    z-index: 99;
+    position: fixed;
+    font-size: 40px;
+    padding: 10px;
+    top: 250px;
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(90deg,rgba(0, 0, 0, 0), rgb(13, 110, 253)) 1;
+    background-color: #000;
 }
