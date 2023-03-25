@@ -1,6 +1,6 @@
 // Nav Bar
 document.getElementById("nav-placeholder").innerHTML = `
-<nav class="navbar navbar-expand-lg sticky">
+<nav id="nav" class="navbar navbar-expand-lg sticky">
         <div class="container-fluid">
             <a href="index.html"><i class="fa-solid fa-person-rifle px-2 py-2 fs-5 rounded-0">Gunify</i></a>
             <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
@@ -30,3 +30,14 @@ document.getElementById("nav-placeholder").innerHTML = `
             </div>
         </div>
     </nav>`;
+    
+let dWidth = $(window).width();
+$('#cart-menu').css('left', `${dWidth}px`);
+$('#cart-menu .fa-xmark').click(function () {
+    dWidth = $(window).width();
+    $('#cart-menu').animate({ 'left': `${dWidth}px` }, 500);
+})
+$('#nav .fa-cart-shopping').click(function () {
+    dWidth = $(window).width() - $('#cart-menu').innerWidth();
+    $('#cart-menu').animate({ 'left': `${dWidth}px` }, 500);
+})

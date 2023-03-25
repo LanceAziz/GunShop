@@ -28,7 +28,7 @@ function diaplayProduct(products) {
                     <div class="d-flex justify-content-center my-4">
                         <i class="fa-solid fa-cart-plus fs-3 px-2"></i>
                         <i class="fa-solid fa-cart-arrow-down fs-3 px-2"></i>
-                        <i class="fa-solid fa-circle-info fs-3 px-2"></i>
+                        <a href="ProductDetails.html"><i class="fa-solid fa-circle-info fs-3 px-2"></i></a>
                     </div>
                 </div>
             </div>`
