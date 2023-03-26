@@ -1,0 +1,161 @@
+/* General */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #fff;
+}
+body {
+    background-color: rgb(0, 0, 0);
+}
+.title h2 {
+    position: relative;
+    font-family: 'Audiowide', cursive;
+    font-weight: 900;
+    text-transform: capitalize;
+    padding: 0 60px;
+    margin: 40 0;
+    z-index: -1;
+}
+.title h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 50px;
+    bottom: 5px;
+    background: #0d6efd;
+    clip-path: polygon(0 0, 100% 0, 50% 100%, 0% 100%);
+}
+.sub-title h2 {
+    position: relative;
+    font-family: 'Audiowide', cursive;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 0 60px;
+    margin: 40 0;
+}
+.sub-title h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 50px;
+    bottom: 5px;
+    background: #0d6efd;
+    clip-path: polygon(0 0, 100% 0, 50% 100%, 0% 100%);
+}
+.skew {
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+}
+.skew-rev {
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+}
+i:hover,
+.nav-link:hover {
+    color: #0d6dfd !important;
+    transition: 0.5s;
+}
+.trash-ani:hover {
+    color: #dc3545 !important;
+    transition: 0.5s;
+}
+.edit-ani:hover {
+    color: #198754 !important;
+    transition: 0.5s;
+}
+.cart-ani:hover {
+    color: #f0ad4e !important;
+    transition: 0.5s;
+}
+.add-ani:hover {
+    color: #0d6dfd !important;
+    border-image: linear-gradient(90deg, rgba(0, 0, 0, 0), rgb(255, 255, 255)) 1 !important;
+    transition: 0.5s;
+}
+/* Section 1 */
+header {
+    background-image: url(../Images/Cover.jpg);
+    background-size: cover;
+}
+.cover {
+    background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.5));
+}
+/* Section 2 */
+.cus-table td {
+    padding: 0 10px;
+}
+/* Section 3 */
+.cat-hov,.cat-hov h3,.cat-hov i,.under-none a{
+    color: #fff !important;
+    background: #0d6dfd !important;
+    transition: 0.5s;
+    text-decoration: none;
+}
+.cat-hov:hover,.cat-hov:hover h3,.cat-hov:hover i{
+    color: #0d6dfd !important;
+    background: #fff !important;
+    cursor: pointer;
+}
+/* Section 4 */
+.border-grad {
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(45deg, #0d6dfd, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgb(13, 110, 253)) 1;
+}
+.Prd-Title {
+    font-size: 25px;
+    height: 70px;
+    padding: 0 5px;
+}
+.prd-Price {
+    font-size: medium;
+}
+.w-qty {
+    width: 50px;
+}
+.b-qty {
+    border-width: 1px;
+}
+.add-btn {
+    z-index: 99;
+    position: fixed;
+    font-size: 40px;
+    padding: 10px;
+    top: 250px;
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(90deg, rgba(0, 0, 0, 0), rgb(13, 110, 253)) 1;
+    background-color: #000;
+}
+.crt-menu {
+    z-index: 99;
+    position: fixed;
+    padding: 15px 30px;
+    width: 400px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: auto;
+    background-color: #000;
+}
+.bb-crt-item {
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-image: linear-gradient(0.25turn, rgb(13, 110, 253), rgba(0, 0, 0, 0)) 1;
+}
+.bt-crt-item {
+    border-top-width: 3px;
+    border-top-style: solid;
+    border-image: linear-gradient(0.25turn, rgba(0, 0, 0, 0), rgb(13, 110, 253)) 1;
+}
+.scroll {
+    height: 700px;
+    overflow: auto;
+}
+.scroll::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+}
