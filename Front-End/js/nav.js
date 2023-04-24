@@ -25,13 +25,13 @@ document.getElementById("nav-placeholder").innerHTML = `
                         <i class="fa-solid fa-cart-shopping p-2 pe-4 fs-5 rounded-0 cart-ani"><span class="position-absolute top-0 start-50  badge rounded-circle bg-danger p-1"><span class="visually-hidden">unread messages</span></span></i>
                         </div>
                     <button class="btn border-start-0 border-end-0 rounded-0 btn-primary fa-sm px-4">Log Out</button>
-                    <button class="btn border-start-0 border-end-0 rounded-0 btn-primary fa-sm px-4">Sign In</button>
+                    <a href="Register.html"><button class="btn border-start-0 border-end-0  h-100 rounded-0 btn-primary fa-sm px-4">Sign In</button></a>
                 </div>
             </div>
         </div>
     </nav>
     <!-- Cart Items -->
-    <div id="cart-menu" class="crt-menu d-flex flex-column justify-content-between">
+    <div id="cart-menu" class="crt-menu flex-column justify-content-between">
         <div class="sticky-md-top">
             <!-- Header -->
             <div class="d-flex justify-content-between bb-crt-item py-2">
@@ -75,14 +75,10 @@ document.getElementById("nav-placeholder").innerHTML = `
             </div>
         </div>
     </div>`;
-    
-let dWidth = $(window).width();
-$('#cart-menu').css('left', `${dWidth}px`);
+$('#cart-menu').toggle(0);
 $('#cart-menu .fa-xmark').click(function () {
-    dWidth = $(window).width();
-    $('#cart-menu').animate({ 'left': `${dWidth}px` }, 500);
+    $('#cart-menu').toggle(300);
 })
 $('#nav .fa-cart-shopping').click(function () {
-    dWidth = $(window).width() - $('#cart-menu').innerWidth();
-    $('#cart-menu').animate({ 'left': `${dWidth}px` }, 500);
+    $('#cart-menu').toggle(300);
 })
