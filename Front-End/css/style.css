@@ -18,11 +18,31 @@ body {
     margin: 40 0;
     z-index: -1;
 }
+.titleForm h2 {
+    position: relative;
+    font-family: 'Audiowide', cursive;
+    font-weight: 900;
+    text-transform: capitalize;
+    padding: 0 60px;
+    margin: 40 0;
+    z-index: -1;
+}
 .title h2::before {
     content: '';
     position: absolute;
     left: 0;
     top: 5px;
+    width: 50px;
+    bottom: 5px;
+    background: #0d6efd;
+    clip-path: polygon(0 0, 100% 0, 50% 100%, 0% 100%);
+}
+.titleForm h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    margin-left: 330px;
     width: 50px;
     bottom: 5px;
     background: #0d6efd;
@@ -35,6 +55,7 @@ body {
     text-transform: capitalize;
     padding: 0 60px;
     margin: 40 0;
+    z-index: -1;
 }
 .sub-title h2::before {
     content: '';
@@ -129,6 +150,7 @@ header {
     border-image: linear-gradient(90deg, rgba(0, 0, 0, 0), rgb(13, 110, 253)) 1;
     background-color: #000;
 }
+
 .crt-menu {
     z-index: 99;
     position: fixed;
@@ -139,6 +161,7 @@ header {
     right: 0px;
     left: auto;
     background-color: #000;
+    display: flex;
 }
 .bb-crt-item {
     border-bottom-width: 3px;
