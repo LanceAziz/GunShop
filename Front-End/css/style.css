@@ -150,7 +150,6 @@ header {
     border-image: linear-gradient(90deg, rgba(0, 0, 0, 0), rgb(13, 110, 253)) 1;
     background-color: #000;
 }
-
 .crt-menu {
     z-index: 99;
     position: fixed;
@@ -182,3 +181,172 @@ header {
     height: 0;
     background-color: transparent;
 }
+/* Section 5 */
+.owl-carousel .owl-item {
+    float: left
+  }
+  /*Products*/
+  .products-area .catagories-lists {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 230px;
+    text-align: center;
+    -webkit-clip-path: polygon(0 0%, 100% 0, 100% 90%, 0% 100%);
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+    background: #222;
+    transition: all 0.3s;
+    border: 1px solid #0d6dfd;
+}
+.products-area .pro-ctg {
+    margin: 0 0 80px;
+  }
+  .products-area .catagories-lists.nd {
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+  }
+  .products-area .catagories-lists .contents {
+    display: block;
+    padding: 75px 0;
+  }
+  .btn1 {
+    margin: 3%;
+      display: inline-block;
+      position: relative;
+      padding: 0 60px;
+      line-height: 50px;
+      height: 50px;
+      background: #0d6dfd;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: #fff;
+      cursor: pointer;
+      text-transform: capitalize;
+      clip-path: polygon(12% 0%, 100% 0, 88% 100%, 0% 100%);
+    }
+    .btn1:hover {
+      background: #111;
+      color: #fff;
+    }
+  .btn4 {
+    display: inline-block;
+    position: relative;
+    padding: 0 60px;
+    line-height: 46px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #0d6dfd;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    text-transform: capitalize;
+    -webkit-clip-path: polygon(12% 0%, 100% 0, 88% 100%, 0% 100%);
+    clip-path: polygon(12% 0%, 100% 0, 88% 100%, 0% 100%);
+  }
+  .btn4:after {
+    content: '';
+    position: absolute;
+    right: 11px;
+    top: -5px;
+    bottom: -5px;
+    width: 2px;
+    transform: rotate(27deg);
+    background: #0d6dfd;
+  }
+  .btn4:before {
+    content: '';
+    position: absolute;
+    left: 11px;
+    top: -5px;
+    bottom: -5px;
+    width: 2px;
+    transform: rotate(27.8deg);
+    background: #0d6dfd;
+  }
+  .btn4:hover {
+    background: #0d6dfd;
+    color: #fff;
+  }
+  .products-area .owl-controls .owl-buttons {
+    position: absolute;
+    left: 15px;
+    right: 13px;
+    top: 45%;
+  }
+  .products-area .owl-controls .owl-buttons div {
+    opacity: 1;
+    display: block;
+    border-radius: 0;
+    background: #0d6dfd;
+    color: #fff;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    font-size: 15px;
+    transition: all 0.3s;
+  }
+  .products-area .owl-controls .owl-buttons div.owl-prev {
+    left: -73px;
+    padding: 0 25px 0 33px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
+  }
+  .products-area .owl-controls .owl-buttons div.owl-next {
+    right: -54px;
+    padding: 0 33px 0 25px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+  }
+  .products-area .catagories-lists:hover {
+    background: #0d6dfd;
+    border: 1px solid #0d6dfd;
+  }
+  .products-area .pro-sliders .products {
+    text-align: center;
+    display: block;
+    position: relative;
+  }
+  /*hover imag*/
+  .products-area .pro-sliders .products figure {
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+  .products-area .pro-sliders .products figure img {
+    width: 100%;
+    transition: all 0.3s;
+  }
+  .products-area .pro-sliders .products .contents {
+    display: block;
+    position: relative;
+    border: 1px solid #0d6dfd;
+    border-top: none;
+    padding: 40px 0;
+    transition: all 0.3s;
+  }
+  .products-area .pro-sliders .products .contents h3,span,.catagories-lists .contents h3 {
+    font-size: 22px;
+    font-weight: 400;
+    font-family: "Audiowide", cursive;
+    color: #fffefe;
+    margin: 0 0 10px;
+  }
+  .products-area .pro-sliders .products:hover figure img {
+    transform: scale(1.1) rotate(5deg);
+  }
+  .owl-carousel {
+    display: none;
+    position: relative;
+    width: 100%;
+  }
+  .owl-carousel .owl-wrapper-outer {
+    overflow: hidden;
+    position: relative;
+    width: 100%
+  }
+  #nav-placeholder{
+    z-index: 9999;
+  }
