@@ -8,8 +8,8 @@ class ProductController extends Controller
 {
     public function index ()
     {
-      $product =Product::get();
-      return response()->json($product);
+      $products =Product::get();
+      return response()->json($products);
     }
     public function show($id)
     {
