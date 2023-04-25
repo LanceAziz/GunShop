@@ -1,30 +1,33 @@
-
+//Form Inputs
 let productName = document.getElementById('productName');
 let productPrice = document.getElementById('productPrice');
 let productType = document.getElementById('productType');
 let productCaliber = document.getElementById('productCaliber');
 let Descriptions = document.getElementById('Descriptions');
 
-document.querySelector('#productSubmition').addEventListener('click', async function () {
-    let product={
-        name:productName.value,
-        price:productPrice.value,
-        type:productType.value,
-        caliber:productCaliber.value,
-        description:Descriptions.value
-    }  
-    var response = await fetch(`http://localhost/GunShop-Backend/Back-End/public/api/product/store`,{
-      method:"POST",
-      body:JSON.stringify(product)
-    });
-    console.log(response);
-  }
-)
+//Add Product Function
+async function AddProduct () {
+  let product={
+      name:productName.value,
+      price:productPrice.value,
+      type:productType.value,
+      caliber:productCaliber.value,
+      description:Descriptions.value
+  }  
+  console.log(product);
+  var response = await fetch(`http://localhost/GunShop-Backend/Back-End/public/api/product/store`,{
+    method:"POST",
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(product)
+  });
+  console.log(response);
+}
 
-
-
-
-
+//Submit Product Action 
+document.querySelector('#productSubmition').addEventListener('click', AddProduct());
 
 
 
