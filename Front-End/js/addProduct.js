@@ -13,8 +13,9 @@ document.querySelector('#productSubmition').addEventListener('click', async func
         caliber:productCaliber.value,
         description:Descriptions.value
     }  
-    var response = await fetch(`https://localhost/GunShop-Backend/Back-End/public/api/store`,{
-      method:"POST",body:JSON.stringify(product)
+    var response = await fetch(`http://localhost/GunShop-Backend/Back-End/public/api/product/store`,{
+      method:"POST",
+      body:JSON.stringify(product)
     });
     console.log(response);
   }
