@@ -16,8 +16,8 @@
     <div>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-12 col-sm-12">
-                    <div class=" titleForm my-5 text-center">
+                <div class="col-md-12 col-sm-12 d-flex justify-content-center">
+                    <div class="my-5 text-center w-50 title">
                         <h2>new customer register here</h2>
                         <p class="text-primary mt-3">Register got your account with weapon store is free,quick and easy.
                         </p>
@@ -33,60 +33,34 @@
                                 <div class=" col-md-6 col-sm-6 col-xs-12">
                                     <input
                                         class="form-control text-primary   bg-black border-primary px-3 fs-6 p-3 rounded-3 mb-2 border-2  "
-                                        type="text" name="name" placeholder="Username*">
-                                </div>
-                                <div class="form-group  col-md-6 col-sm-6 col-xs-12">
-                                    <input
-                                        class="form-control text-primary  bg-black border-primary px-3 fs-6 p-3 rounded-3 mb-2 border-2  "
-                                        type="email" name="Email" placeholder="Email*">
+                                        type="text" name="name" placeholder="Username*" id="usernameID">
                                 </div>
                                 <div class="form-group  col-md-6 col-sm-6 col-xs-12">
 
                                     <input
                                         class="form-control text-primary  bg-black border-primary px-3 fs-6 p-3 rounded-3 mb-2 border-2  "
-                                        type="password" name="password" placeholder="password*">
+                                        type="password" name="password" placeholder="password*" id="passwordID">
                                 </div>
                                 <div class="form-group  col-md-6 col-sm-6 col-xs-12">
-
                                     <input
                                         class="form-control text-primary  bg-black border-primary px-3 fs-6 p-3 rounded-3 mb-2 border-2  "
-                                        type="password" name="re-enter password" placeholder="re-enter password*">
+                                        type="text" name="LicenseID " placeholder="License*" id="licenseID">
                                 </div>
 
-                                <div class="form-group  col-md-6 col-sm-6 col-xs-12">
-
-                                    <input
-                                        class="form-control text-primary  bg-black border-primary px-3 fs-6 p-3 rounded-3 mb-2 border-2  "
-                                        type="text" name="phone" placeholder="phone">
-                                </div>
 
                                 <div class="form-group  col-md-6 col-sm-6 col-xs-12">
 
                                     <input
                                         class="form-control text-primary  bg-black border-primary px-3 fs-6 p-3 rounded-3 mb-2 border-2  "
-                                        type="text" name="company name" placeholder="company name">
+                                        type="date" name="Birthdate" placeholder="Birthdate*" id="birthdateID">
 
-                                </div>
-
-                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
-
-                                    <input
-                                        class="form-control text-primary  bg-black border-primary px-3 fs-6 p-3 rounded-3 mb-2 border-2  "
-                                        type="url" name="website" placeholder="website">
-
-                                </div>
-                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
-
-                                    <input
-                                        class="form-control text-primary  bg-black border-primary px-3 fs-6 p-3 rounded-3 mb-2 border-2  "
-                                        type="text" name="address line" placeholder="address line">
                                 </div>
 
                                 <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
                                 </div>
                                 <div class="my-3 pb-1">
-                                    <a href="#" class="btn btn-primary text-white  p-3 w-100  fw-bolder ">
+                                    <a onclick="register()" href="#" class="btn btn-primary text-white  p-3 w-100  fw-bolder ">
                                         register </a>
                                 </div>
                             </div>
@@ -105,7 +79,7 @@
     </div>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/Authontication.js"></script>
     <script src="js/nav.js"></script>
 </body>
 
