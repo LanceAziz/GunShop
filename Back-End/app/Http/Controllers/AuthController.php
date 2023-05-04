@@ -79,7 +79,7 @@ class AuthController extends Controller
         ]);
 
         //
-        return response()->json($new_access_token);
+        return response()->json($user);
     }
 
 
