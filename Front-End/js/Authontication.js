@@ -1,12 +1,17 @@
-let username = document.getElementById("usernameID")
-let password = document.getElementById("passwordID")
+//
+let rUsername = document.getElementById("usernameRID")
+let rPassword = document.getElementById("passwordRID")
 let birthdate = document.getElementById("birthdateID")
 let license = document.getElementById("licenseID")
+let lUsername = document.getElementById("usernameLID")
+let lPassword = document.getElementById("passwordLID")
 
+let loggedUser = {}
+//Resigter
 async function register() {
     let user = {
-        name: username.value,
-        password: password.value,
+        name: rUsername.value,
+        password: rPassword.value,
         birthdate: birthdate.value,
         license: license.value
     }
@@ -18,12 +23,14 @@ async function register() {
         },
         body: JSON.stringify(user)
     });
-    console.log(response);
+    loggedUser = await response.json();
+    console.log(loggedUser);
 }
+//Login
 async function login() {
     let user = {
-        name: username.value,
-        password: password.value,
+        name: lUsername.value,
+        password: lPassword.value,
     }
     var response = await fetch(`http://localhost/GunShop-Backend/Back-End/public/api/login`, {
         method: "POST",
@@ -34,5 +41,7 @@ async function login() {
         body: JSON.stringify(user)
     });
     console.log(response);
+    loggedUser = await response.json();
+    console.log(loggedUser);
 }
 
