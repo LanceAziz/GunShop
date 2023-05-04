@@ -31,7 +31,7 @@ async function AddProduct() {
     description: Descriptions.value
   }
   console.log(product);
-  var response = await fetch(`http://localhost/GunShop-Backend/Back-End/public/api/product/store`, {
+  var response = await fetch(`http://localhost/GunShop/Back-End/public/api/product/store`, {
     method: "POST",
     headers: {
       'Accept': 'application/json',

@@ -15,7 +15,7 @@ async function register() {
         birthdate: birthdate.value,
         license: license.value
     }
-    var response = await fetch(`http://localhost/GunShop-Backend/Back-End/public/api/register`, {
+    var response = await fetch(`http://localhost/GunShop/Back-End/public/api/register`, {
         method: "POST",
         headers: {
             'Accept': 'application/json',
@@ -32,7 +32,7 @@ async function login() {
         name: lUsername.value,
         password: lPassword.value,
     }
-    var response = await fetch(`http://localhost/GunShop-Backend/Back-End/public/api/login`, {
+    var response = await fetch(`http://localhost/GunShop/Back-End/public/api/login`, {
         method: "POST",
         headers: {
             'Accept': 'application/json',
