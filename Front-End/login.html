@@ -14,9 +14,11 @@
 
 <body class="bg-black fs-6 text-white">
     <div class="login_section">
+        
         <!-- login_form_wrapper -->
-        <div >
+        <div>
             <div class="container">
+                
                 <div class="row justify-content-center ">
                     <div class="col-md-12 col-sm-12 d-flex justify-content-center">
                         <div class="text-center my-5 w-50 title">
@@ -27,38 +29,43 @@
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-md-8 col-md-offset-2">
+                        <div class="alert alert-danger invalid-user"></div>
+                        <div class="alert alert-success valid-user"></div>
                         <!-- login_wrapper -->
-                        <div class=" rounded-5 mb-4 p-5 shadow  bg-black bg-gradient  bg-black border-primary ">
-                            <!-- email -->
+                        <div class=" rounded-5 mb-4 p-5 shadow  bg-black bg-gradient  bg-black border-primary">
+                            <!-- Username -->
                             <div>
                                 <div>
-                                    <input type="text" class="form-control text-primary  bg-black border-primary px-3 fs-6 p-3 rounded-3 mb-2 border-2  " required=""
+                                    <input type="text"
+                                        class="form-control text-primary bg-black border-primary px-3 fs-6 p-3 rounded-3 mb-2 border-2"
                                         id="usernameLID" placeholder="Username*">
                                 </div>
                             </div>
-                            <!-- pass -->
+                            <!-- Password -->
                             <div>
                                 <div>
-                                    <input type="password" class="form-control px-3   bg-black border-primary text-primary  p-3 fs-6 rounded-3" id="passwordLID"
-                                        placeholder="Password*">
+                                    <input type="password"
+                                        class="form-control px-3   bg-black border-primary text-primary  p-3 fs-6 rounded-3"
+                                        id="passwordLID" placeholder="Password*">
                                 </div>
                             </div>
-                        
+
                             <!-- button -->
                             <div class="my-3 pb-1">
                                 <a onclick="login()" href="#" class="btn btn-primary text-white  p-3 w-100  fw-bolder ">
-                                   Login </a>
+                                    Login </a>
                             </div>
-
+                            
                             <!-- Register -->
                             <div class="login_message pt-3">
-                                <p>Don't have an account ? <a class="text-primary" href="register.html"> Register Now </a> </p>
+                                <p>Don't have an account ? <a class="text-primary" href="register.html"> Register Now
+                                    </a> </p>
                             </div>
                             <a href="Register.html"></a>
-
                         </div>
                         <!-- text -->
-                        <p class="text-primary fs-6 mx-auto mt-3 text-center text-capitalize w-75 ">In case you are using a
+                        <p class="text-primary fs-6 mx-auto mt-3 text-center text-capitalize w-75 ">In case you are
+                            using a
                             public/shared computer we recommend that
                             you logout to prevent any un-authorized access to your account</p>
 

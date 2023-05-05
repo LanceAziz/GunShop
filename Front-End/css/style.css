@@ -385,3 +385,12 @@ span,
   height: 0;
   background-color: transparent;
 }
+
+
+/* Login */
+.invalid-user{
+  display: none;
+}
+.valid-user{
+  display: none;
+}

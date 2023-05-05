@@ -16,11 +16,6 @@ function ClearData() {
 }
 
 
-function ShowSuccessMsg() {
-  $("#successMsg").fadeIn().next().delay(500).fadeOut();
-
-}
-
 //Add Product Function
 async function AddProduct() {
   let product = {
@@ -48,7 +43,6 @@ async function AddProduct() {
 document.querySelector('#productSubmition').addEventListener('click', AddProduct);
 
 function Validation() {
-
   if (productName.value == "" || productPrice.value == "" || productType.value == "" || productCaliber.value == "") {
     document.getElementById("#productSubmition").setAttribute("disabled")
   }
