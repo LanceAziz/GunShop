@@ -91,6 +91,7 @@ i:hover,
 /* Section 1 - Home*/
 header {
   background-image: url(../Images/Cover.jpg);
+  background-attachment: fixed;
   background-size: cover;
 }
 

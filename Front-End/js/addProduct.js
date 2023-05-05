@@ -1,4 +1,4 @@
-//Form Inputs
+// Form Inputs
 let productName = document.getElementById('productName');
 let productPrice = document.getElementById('productPrice');
 let productType = document.getElementById('productType');
@@ -6,7 +6,7 @@ let productCaliber = document.getElementById('productCaliber');
 let Descriptions = document.getElementById('Descriptions');
 
 
-// clear data(form input)
+// Clear Product Form
 function ClearData() {
   productName.value = "";
   productPrice.value = "";
