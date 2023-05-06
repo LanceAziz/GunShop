@@ -5,22 +5,83 @@ let birthdate = document.getElementById("birthdateID");
 let license = document.getElementById("licenseID");
 let lUsername = document.getElementById("usernameLID");
 let lPassword = document.getElementById("passwordLID");
+let button = document.getElementById("reg-btn");
 
 // The Logged Use;
 let loggedUser;
 
 // Clear Authentication Forms
 function ClearDataAuth(func) {
-    if(func == 'login'){
+    if (func == 'login') {
         lUsername.value = "";
         lPassword.value = "";
-    
+
     }
     else {
         rUsername.value = "";
         rPassword.value = "";
         birthdate.value = "";
-        license.value = "";    
+        license.value = "";
+    }
+}
+//Register Validator
+//Replacer function that edits the design
+function replacer(component,regx){
+    if (regx.test(component.value) == true) {
+        if (component.classList.contains('is-invalid')) {
+            component.classList.replace('is-invalid', 'is-valid');
+        }
+        return true;
+    } 
+    else {
+        component.classList.add('is-invalid');
+        return false;
+    }
+
+}
+
+//REGX
+function validateUsername() {
+    return replacer(rUsername, /^.{3,35}$/ )
+}
+
+function validatePassword() {
+    return replacer(rPassword, /^.{5,20}$/ )
+}
+function validateLicense() {
+    return replacer(license, /^[A-Za-z0-9]{15}$/ )
+}
+
+//EventListeners
+rUsername.addEventListener("focus", () => {
+    userameInputTouched = validateUsername();
+})
+rPassword.addEventListener("focus", () => {
+    passwordInputTouched = validatePassword()
+})
+license.addEventListener("focus", () => {
+    licenseInputTouched = validateLicense()
+})
+
+//Button (Enabled/Disabled)
+let userameInputTouched = false;
+let passwordInputTouched = false;
+let licenseInputTouched = false;
+
+function finalValidate(){
+    if(userameInputTouched){
+        validateUsername();
+    }
+    if(passwordInputTouched){
+        validatePassword()
+    }
+    if(licenseInputTouched){
+        validateLicense()
+    }
+    if(validateUsername()&&validatePassword()&&validateLicense()){
+        button.removeAttribute("disabled")
+    }else{
+        button.setAttribute("disabled", true)
     }
 }
 
@@ -42,14 +103,14 @@ async function register() {
         },
         body: JSON.stringify(user)
     });
-    if(response.ok){
+    if (response.ok) {
         loggedUser = await response.json();
-        console.log(loggedUser);  
+        console.log(loggedUser);
     }
-    else{
+    else {
 
     }
-    ClearDataAuth('register');  
+    ClearDataAuth('register');
 }
 
 // Login Function
