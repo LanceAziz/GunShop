@@ -1,0 +1,18 @@
+:root {
+    --dd-overlay: rgba(0, 0, 0, .75);
+    --dd-background: #FFFFFF;
+    --dd-text1: #333333;
+    --dd-text2: #FFFFFF;
+    --dd-primary: #FD4741;
+    --dd-gradient: linear-gradient(45deg, #e61e68 0%, #FD4741 100%);
+    --dd-radius: .35em;
+    --dd-shadow: 0 0 2.5em rgba(0, 0, 0, 0.1);
+    --dd-range: rgba(0, 0, 0, 0.05);
+  }
+  .gun-shop-styles{
+    --dd-background: #333;
+    --dd-primary: #0d6efd;
+    --dd-gradient: linear-gradient(45deg, #1dc307 0%, #FD4741 100%);
+    --dd-selectedBackground: linear-gradient(45deg, #1dc307 0%, #FD4741 100%);
+
+  }

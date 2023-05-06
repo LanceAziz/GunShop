@@ -6,7 +6,10 @@ let license = document.getElementById("licenseID");
 let lUsername = document.getElementById("usernameLID");
 let lPassword = document.getElementById("passwordLID");
 let button = document.getElementById("reg-btn");
-
+//date dropper plugin
+new dateDropper({
+    selector: 'input[type="date"]'
+  });
 // The Logged Use;
 let loggedUser;
 
