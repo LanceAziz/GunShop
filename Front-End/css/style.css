@@ -394,3 +394,12 @@ span,
 .valid-user{
   display: none;
 }
+
+.date-picker{
+  --dd-background: #121212 ;
+  --dd-primary: #0d6dfd ;
+  --dd-gradient: #0d6dfd;
+  --dd-monthBackground: var(--dd-gradient);
+  --dd-selectedBackground: var(--dd-gradient);
+  --dd-confirmButtonBackground: var(--dd-gradient);
+}
