@@ -6,10 +6,7 @@ let license = document.getElementById("licenseID");
 let lUsername = document.getElementById("usernameLID");
 let lPassword = document.getElementById("passwordLID");
 let button = document.getElementById("reg-btn");
-//date dropper plugin
-new dateDropper({
-    selector: 'input[type="date"]'
-  });
+
 // The Logged Use;
 let loggedUser;
 
@@ -20,102 +17,113 @@ function ClearDataAuth(func) {
         lPassword.value = "";
 
     }
-    else {
+    else { 
         rUsername.value = "";
         rPassword.value = "";
         birthdate.value = "";
         license.value = "";
     }
 }
-//Register Validator
-//Replacer function that edits the design
-function replacer(component,regx){
-    if (regx.test(component.value) == true) {
-        if (component.classList.contains('is-invalid')) {
-            component.classList.replace('is-invalid', 'is-valid');
-        }
-        return true;
-    } 
-    else {
-        component.classList.add('is-invalid');
-        return false;
-    }
-
-}
-
-//REGX
-function validateUsername() {
-    return replacer(rUsername, /^.{3,35}$/ )
-}
-
-function validatePassword() {
-    return replacer(rPassword, /^.{5,20}$/ )
-}
-function validateLicense() {
-    return replacer(license, /^[A-Za-z0-9]{15}$/ )
-}
-
+//Register Validator 
 //EventListeners
-rUsername.addEventListener("focus", () => {
+rUsername.addEventListener("change", () => {
     userameInputTouched = validateUsername();
 })
-rPassword.addEventListener("focus", () => {
+rPassword.addEventListener("change", () => {
     passwordInputTouched = validatePassword()
 })
-license.addEventListener("focus", () => {
+license.addEventListener("change", () => {
     licenseInputTouched = validateLicense()
 })
+new dateDropper({
+    selector: 'input[type="date"]',
+    onChange: function () {
+        birthdateInputTouched = validateBirthdate();
+        finalValidate()
+    }
+});
 
 //Button (Enabled/Disabled)
 let userameInputTouched = false;
 let passwordInputTouched = false;
 let licenseInputTouched = false;
+let birthdateInputTouched = false;
 
-function finalValidate(){
-    if(userameInputTouched){
-        validateUsername();
+//Replacer function that edits the design
+function replacer(component, regx) {
+    if (regx.test(component.value) == true) {
+        component.classList.add('is-valid');
+        component.classList.remove('is-invalid');
+        return true;
     }
-    if(passwordInputTouched){
+    else {
+        component.classList.add('is-invalid');
+        component.classList.remove('is-valid');
+        return false;
+    }
+}
+
+function finalValidate() {
+    if (userameInputTouched) {
+        validateUsername()
+    }
+    if (passwordInputTouched) {
         validatePassword()
     }
-    if(licenseInputTouched){
+    if (licenseInputTouched) {
         validateLicense()
     }
-    if(validateUsername()&&validatePassword()&&validateLicense()){
+    if (birthdateInputTouched) {
+        validateBirthdate()
+    }
+    if (validateUsername() && validatePassword() && validateLicense() && validateBirthdate()) {
         button.removeAttribute("disabled")
-    }else{
+    } else {
         button.setAttribute("disabled", true)
     }
 }
 
-// Resigter Function
-async function register() {
-    // Get The Form Values in a User Object
-    let user = {
-        name: rUsername.value,
-        password: rPassword.value,
-        birthdate: birthdate.value,
-        license: license.value
-    }
-    // Posting User to the API
-    var response = await fetch(`http://localhost/GunShop/Back-End/public/api/register`, {
-        method: "POST",
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(user)
-    });
-    if (response.ok) {
-        loggedUser = await response.json();
-        console.log(loggedUser);
-    }
-    else {
-
-    }
-    ClearDataAuth('register');
+//REGX
+function validateUsername() {
+    return replacer(rUsername, /^.{3,35}$/)
 }
 
+function validatePassword() {
+    return replacer(rPassword, /^.{5,20}$/)
+}
+function validateLicense() {
+    return replacer(license, /^[A-Za-z0-9]{15}$/)
+}
+function validateBirthdate() {
+    return replacer(birthdate, /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(19[4-9][0-9]|200[0-5])$/)
+}
+
+// Resigter Function
+async function register() {
+        // Get The Form Values in a User Object
+        let user = {
+            name: rUsername.value,
+            password: rPassword.value,
+            birthdate: birthdate.value,
+            license: license.value
+        }
+        // Posting User to the API
+        var response = await fetch(`http://localhost/GunShop/Back-End/public/api/register`, {
+            method: "POST",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        });
+        if (response.ok) {
+            loggedUser = await response.json();
+            console.log(loggedUser);
+        }
+        else {
+        }
+        ClearDataAuth('register');
+}
 // Login Function
 async function login() {
     let user = {
