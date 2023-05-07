@@ -12,64 +12,59 @@
     <link rel="stylesheet" href="css/fonts.css">
 </head>
 
-<body class="bg-black fs-6 text-white">
-    <div class="login_section">
-        
-        <!-- login_form_wrapper -->
-        <div>
-            <div class="container">
-                
-                <div class="row justify-content-center ">
-                    <div class="col-md-12 col-sm-12 d-flex justify-content-center">
-                        <div class="text-center my-5 w-50 title">
-                            <h2>login to your account</h2>
-                            <p class="mt-4 text-primary ">please login to access weapon store area.</p>
-                        </div>
+<body>
+    <!-- login_form_wrapper -->
+    <div class="vh-100 d-flex align-items-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12 col-sm-12 d-flex justify-content-center">
+                    <div class="text-center my-5 w-50 title">
+                        <h2>login to your account</h2>
+                        <p class="mt-4 text-primary">please login to access weapon store area.</p>
                     </div>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-8 col-md-offset-2">
-                        <div class="alert alert-danger invalid-user"></div>
-                        <div class="alert alert-success valid-user"></div>
-                        <!-- login_wrapper -->
-                        <div class=" rounded-5 mb-4 p-5 shadow  bg-black bg-gradient  bg-black border-primary">
-                            <!-- Username -->
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="alert alert-danger invalid-user"></div>
+                    <div class="alert alert-success valid-user"></div>
+                    <!-- login_wrapper -->
+                    <div class=" rounded-5 mb-4 p-5 shadow  bg-black bg-gradient  bg-black border-primary">
+                        <!-- Username -->
+                        <div>
                             <div>
-                                <div>
-                                    <input type="text"
-                                        class="form-control text-primary bg-black border-primary px-3 fs-6 p-3 rounded-3 mb-2 border-2"
-                                        id="usernameLID" placeholder="Username*">
-                                </div>
+                                <input type="text"
+                                    class="form-control text-primary bg-black border-primary px-3 fs-6 p-3 rounded-3 mb-2 border-2"
+                                    id="usernameLID" placeholder="Username*">
                             </div>
-                            <!-- Password -->
-                            <div>
-                                <div>
-                                    <input type="password"
-                                        class="form-control px-3   bg-black border-primary text-primary  p-3 fs-6 rounded-3"
-                                        id="passwordLID" placeholder="Password*">
-                                </div>
-                            </div>
-
-                            <!-- button -->
-                            <div class="my-3 pb-1">
-                                <a onclick="login()" href="#" class="btn btn-primary text-white  p-3 w-100  fw-bolder ">
-                                    Login </a>
-                            </div>
-                            
-                            <!-- Register -->
-                            <div class="login_message pt-3">
-                                <p>Don't have an account ? <a class="text-primary" href="register.html"> Register Now
-                                    </a> </p>
-                            </div>
-                            <a href="Register.html"></a>
                         </div>
-                        <!-- text -->
-                        <p class="text-primary fs-6 mx-auto mt-3 text-center text-capitalize w-75 ">In case you are
-                            using a
-                            public/shared computer we recommend that
-                            you logout to prevent any un-authorized access to your account</p>
+                        <!-- Password -->
+                        <div>
+                            <div>
+                                <input type="password"
+                                    class="form-control px-3   bg-black border-primary text-primary  p-3 fs-6 rounded-3"
+                                    id="passwordLID" placeholder="Password*">
+                            </div>
+                        </div>
 
+                        <!-- button -->
+                        <div class="my-3 pb-1">
+                            <a onclick="login()" href="#" class="btn btn-primary text-white  p-3 w-100  fw-bolder ">
+                                Login </a>
+                        </div>
+
+                        <!-- Register -->
+                        <div class="login_message pt-3 text-center">
+                            <p>Don't have an account ? <a class="text-primary" href="register.html"> Register Now</a>
+                            </p>
+                        </div>
+                        <a href="Register.html"></a>
                     </div>
+                    <!-- text -->
+                    <p class="text-primary fs-6 mx-auto mt-3 text-center text-capitalize w-75 ">In case you are
+                        using a
+                        public/shared computer we recommend that
+                        you logout to prevent any un-authorized access to your account</p>
                 </div>
             </div>
         </div>

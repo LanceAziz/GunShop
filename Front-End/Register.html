@@ -13,8 +13,9 @@
     <link rel="stylesheet" href="css/fonts.css">
 </head>
 
-<body class="bg-black fs-6 text-white">
-    <div>
+<body>
+    <!-- Register_form_wrapper -->
+    <div class="vh-100 d-flex align-items-center">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-12 col-sm-12 d-flex justify-content-center">
@@ -24,6 +25,8 @@
                         </p>
                     </div>
                 </div>
+            </div>
+            <div class="row justify-content-center">
                 <div class="col-md-8 col-md-offset-2 ">
                     <div class="bg-black rounded-5 bg-gradient ">
                         <div>
@@ -31,25 +34,32 @@
                                 <p class="text-primary py-2 pt-4 ms-4">Fields with * are mandetory </p>
                             </div>
                             <div class="row  my-2 mx-4">
+                                <!-- Username -->
                                 <div class=" col-md-6 col-sm-6 col-xs-12">
                                     <input
                                         class="form-control text-primary bg-black border-primary px-3 fs-6 p-3 rounded-3 mb-2 border-2"
                                         type="text" name="name" placeholder="Username*" id="usernameRID"
-                                        oninput="finalValidate()">
+                                        onkeyup="finalValidate()">
                                 </div>
+
+                                <!-- Password -->
                                 <div class="form-group  col-md-6 col-sm-6 col-xs-12">
 
                                     <input
                                         class="form-control text-primary bg-black border-primary px-3 fs-6 p-3 rounded-3 mb-2 border-2"
                                         type="password" name="password" placeholder="password*" id="passwordRID"
-                                        oninput="finalValidate()">
+                                        onkeyup="finalValidate()">
                                 </div>
+
+                                <!-- Licesnse -->
                                 <div class="form-group col-md-6 col-sm-6 col-xs-12">
                                     <input
                                         class="form-control text-primary bg-black border-primary px-3 fs-6 p-3 rounded-3 mb-2 border-2"
                                         type="text" name="LicenseID " placeholder="License*" id="licenseID"
-                                        oninput="finalValidate()">
+                                        onkeyup="finalValidate()">
                                 </div>
+
+                                <!-- Birthdate -->
                                 <div class="form-group  col-md-6 col-sm-6 col-xs-12">
                                     <input
                                         class="form-control text-primary  bg-black border-primary px-3 fs-6 p-3 rounded-3 mb-2 border-2"
@@ -57,23 +67,24 @@
                                         data-dd-opt-expanded-only="true" data-dd-opt-max-year="2005"
                                         data-dd-opt-min-year="1940" data-dd-opt-max-date="2005/12/31"
                                         data-dd-opt-min-date="1940/01/01" data-dd-opt-expandable="true" name="Birthdate"
-                                        placeholder="Birthdate*" id="birthdateID" oninput="finalValidate()">
+                                        placeholder="Birthdate*" id="birthdateID" onkeyup="finalValidate()">
                                 </div>
 
-                                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
-                                </div>
+                                <!-- button -->
                                 <div class="my-3 pb-1">
                                     <button id="reg-btn" onclick="register()" disabled
                                         class="btn btn-primary text-white  p-3 w-100  fw-bolder">Register</button>
                                 </div>
                             </div>
 
+                            <!-- Login -->
                             <div class="login_message my-3 text-center pb-2 ">
                                 <p>Already a member? <a href="login.html"> Login Here </a> </p>
                             </div>
                         </div>
                     </div>
+                    
+                    <!-- text -->
                     <p class=" w-75 text-primary text-center fs-6 m-auto">In case you are using a public/shared
                         computer we recommend that
                         you logout to prevent any un-authorized access to your account</p>

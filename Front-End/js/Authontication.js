@@ -51,7 +51,7 @@ let birthdateInputTouched = false;
 
 //Replacer function that edits the design
 function replacer(component, regx) {
-    if (regx.test(component.value) == true) {
+    if (regx.test(component.value)) {
         component.classList.add('is-valid');
         component.classList.remove('is-invalid');
         return true;

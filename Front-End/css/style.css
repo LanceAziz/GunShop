@@ -17,7 +17,7 @@ body {
   font-weight: 900;
   text-transform: capitalize;
   padding: 0 60px;
-  margin: 40 0;
+  /* margin: 40 0; */
   z-index: -1;
 }
 
