@@ -14,7 +14,6 @@
 
 <body class="bg-black fs-6 text-white">
     <div>
-        <!-- login_form_wrapper -->
         <div>
             <div class="container">
                 <div class="row justify-content-center">
@@ -27,9 +26,10 @@
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-md-8 col-md-offset-2">
-                        <!-- login_wrapper -->
                         <div class=" rounded-5 mb-4 p-5 shadow bg-black bg-gradient">
+
                             <!-- radio -->
+
                             <div class="d-flex justify-content-evenly mb-3 ">
                                 <div>
                                     <input class="form-check-input" type="radio" name="inlineRadioOptions"
@@ -42,44 +42,71 @@
                                     <label class="form-check-label text-primary" for="inlineRadio2">Ammunition</label>
                                 </div>
                             </div>
+
+
+                            <!-- form -->
                             <div class="row  my-2 gy-2 mx-4">
-                                <div class=" col-md-6 col-sm-6 col-xs-12 ">
+                                <!-- Product name -->
+                                <div class=" col-md-12 col-sm-6 col-xs-12 ">
                                     <input
                                         class="form-control text-primary border-primary bg-black px-3 fs-6 p-3 rounded-3 mb-2 border-2  "
-                                        type="text" name="productName:" placeholder="productName*" id="productName">
+                                        type="text" name="productName:" placeholder="product Name*" id="productName">
                                 </div>
-                                <div class="form-group  col-md-6 col-sm-6 col-xs-12 ">
+
+                                <!-- product price -->
+                                <div class="col-md-6 col-sm-6 col-xs-12 ">
                                     <input
                                         class="form-control text-primary  border-primary bg-black px-3 fs-6 p-3 rounded-3 mb-2 border-2  "
-                                        type="text" name="productPrice" placeholder="productPrice*" id="productPrice">
+                                        type="text" name="productPrice" placeholder="product Price*" id="productPrice">
                                 </div>
-                                <div class="form-group  col-md-6 col-sm-6 col-xs-12 ">
+
+                                <!-- caliber -->
+                                <div class=" col-md-6 col-sm-6 col-xs-12 ">
 
                                     <input
                                         class="form-control text-primary  border-primary bg-black px-3 fs-6 p-3 rounded-3 mb-2 border-2  "
-                                        type="email" name="Type" placeholder="productType" id="productType">
+                                        type="tel" name="Caliber" placeholder="product Caliber" id="productCaliber">
                                 </div>
-                                <div class="form-group  col-md-6 col-sm-6 col-xs-12 ">
-
-                                    <input
-                                        class="form-control text-primary  border-primary bg-black px-3 fs-6 p-3 rounded-3 mb-2 border-2  "
-                                        type="tel" name="Caliber" placeholder="productCaliber" id="productCaliber">
-                                </div>
-                                <div>
+                                <div class="bg-danger">
+                                    <!-- textarea -->
                                     <textarea
-                                        class="form-control text-primary  border-primary bg-black fs-6  rounded-3  m-auto border-2 "
+                                        class="form-control text-primary   border-primary bg-black fs-6  rounded-3  m-auto border-2 "
                                         cols="5" rows="5" placeholder="Descriptions" id="Descriptions"></textarea>
                                 </div>
+
+                                <div class="d-flex mt-3  bg-danger " id="Gun">
+                                    <div class="col-md-6 col-sm-6 col-xs-12  ">
+                                        <input
+                                            class="form-control text-primary  border-primary bg-black px-3 fs-6 p-3 rounded-3 mb-2 border-2  "
+                                            type="text" name="Capacity" placeholder="Product Capacity"
+                                            id="productCapacity">
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12 ">
+                                        <input
+                                            class="form-control text-primary  border-primary bg-black px-3 fs-6 p-3 rounded-3 mb-2 border-2  "
+                                            type="text" name="Action" placeholder="Product Action" id="productAction">
+                                    </div>
+
+
+                                </div>
+                                <div id="Ammo">
+                                    <input
+                                        class="form-control text-primary  border-primary bg-black px-3 fs-6 p-3 rounded-3 mb-2 border-2  "
+                                        type="text" name="Rounds" placeholder="Product Rounds" id="productRounds">
+                                </div>
                                 <div class="my-3  ">
-                                   <button  class="btn btn-primary text-white  p-3 w-100  fw-bolder" id="productSubmition ">  Submit </button>
-                                    
+                                    <button class="btn btn-primary text-white  p-3 w-100  fw-bolder"
+                                        id="productSubmition "> Submit </button>
+
                                 </div>
 
                             </div>
 
                         </div>
                         <!-- text -->
-                        <p id="successMsg" class="opacity-0 alert alert-success bg-black fw-bolder bg-gradient border-2 border-success rounded-2 text-center">Product Added </p>
+                        <p id="successMsg"
+                            class="opacity-0 alert alert-success bg-black fw-bolder bg-gradient border-2 border-success rounded-2 text-center">
+                            Product Added </p>
                         <p class="fs-6 mx-auto text-center text-capitalize w-75 text-primary">Add your products to the
                             shop.List your eye-catching products with the best photos, price and descriptions</p>
 
