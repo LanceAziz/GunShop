@@ -20,6 +20,12 @@ class ProductController extends Controller
     return response()->json($product, 200);
   }
 
+  public function showt($type)
+  {
+   $product= Product::where('type', $type)->get();
+   return response()->json($product);
+  }
+
   // Creates New Product in DB
   public function store(Request $request){
     $product = Product::create([
