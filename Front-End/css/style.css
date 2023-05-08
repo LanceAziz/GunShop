@@ -6,12 +6,12 @@
   font-size: 16px;
   color: #fff;
 }
-
+a{
+  text-decoration: none;
+}
 body {
   background-color: rgb(0, 0, 0);
 }
-
-
 .title h2 {
   position: relative;
   font-family: 'Audiowide', cursive;
@@ -21,7 +21,6 @@ body {
   /* margin: 40 0; */
   z-index: -1;
 }
-
 .title h2::before {
   content: '';
   position: absolute;
@@ -32,7 +31,6 @@ body {
   background: #0d6efd;
   clip-path: polygon(0 0, 100% 0, 50% 100%, 0% 100%);
 }
-
 .sub-title h2 {
   position: relative;
   font-family: 'Audiowide', cursive;
@@ -42,7 +40,6 @@ body {
   margin: 40 0;
   z-index: -1;
 }
-
 .sub-title h2::before {
   content: '';
   position: absolute;
@@ -53,31 +50,25 @@ body {
   background: #0d6efd;
   clip-path: polygon(0 0, 100% 0, 50% 100%, 0% 100%);
 }
-
 .skew {
   clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
 }
-
 .skew-rev {
   clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
 }
-
 i:hover,
 .nav-link:hover {
   color: #0d6dfd !important;
   transition: 0.5s;
 }
-
 .trash-ani:hover {
   color: #dc3545 !important;
   transition: 0.5s;
 }
-
 .edit-ani:hover {
   color: #198754 !important;
   transition: 0.5s;
 }
-
 .cart-ani:hover {
   color: #f0ad4e !important;
   transition: 0.5s;
@@ -407,4 +398,11 @@ span,
 
 #Msg{
   display: none;
+}
+.ph3{
+  font-size: 22px;
+  font-weight: 400;
+  font-family: "Audiowide", cursive;
+  color: #fffefe;
+  margin: 0 0 10px;
 }
