@@ -47,16 +47,18 @@ function stringTrimmer(str) {
 var link = document.querySelectorAll(".ph3")
 for (var i = 0; i < link.length; i++) {
   link[i].addEventListener("click", function (e) {
-    var currentMeal = e.target.text;
-    console.log(currentMeal);
-    getproudect(currentMeal);
+    var choice = e.target.text;
+    console.log(choice);
+    sessionStorage.setItem('choice', JSON.stringify(choice));
+    getproudect();
   })
 }
 var recipes = [];
 (function getproudect() {
-    console.log(link);
+    choice = JSON.parse(sessionStorage.getItem('choice'));
+    console.log(choice);
     var httpRequest = new XMLHttpRequest();
-    httpRequest.open("Get", `http://localhost/GunShop/Back-End/public/api/product/showType/${link.text}`);
+    httpRequest.open("Get", `http://localhost/GunShop/Back-End/public/api/product/showType/${choice}`);
     httpRequest.send();
 
     httpRequest.addEventListener("readystatechange", function () {
@@ -67,7 +69,7 @@ var recipes = [];
             //   displayRecipes()
         }
     })
-})()
+})();
 function displayRecipes() {
     var cols = '';
     for (var i = 0; i < recipes.length; i++) {
