@@ -1,43 +1,39 @@
 // Form Inputs
 let productName = document.getElementById('productName');
 let productPrice = document.getElementById('productPrice');
-let productType = document.getElementById('productType');
 let productCaliber = document.getElementById('productCaliber');
-let Descriptions = document.getElementById('Descriptions');
+let productDescription = document.getElementById('productDescription');
 let productCapacity = document.getElementById('productCapacity');
 let productAction = document.getElementById('productAction');
 let productRounds = document.getElementById('productRounds');
 
-
-//radio
-document.getElementById('inlineRadio1').addEventListener('click', function () {
+// Shows Certain Inputs Based on Type
+document.getElementById('Gun-option').addEventListener('click', function () {
   document.getElementById('Gun').classList.remove('d-none')
   document.getElementById('Ammo').classList.add('d-none')
 })
-document.getElementById('inlineRadio2').addEventListener('click', function () {
+document.getElementById('Ammo-option').addEventListener('click', function () {
   document.getElementById('Ammo').classList.remove('d-none')
   document.getElementById('Gun').classList.add('d-none')
 })
-
 
 // Clear Product Form
 function ClearData() {
   productName.value = "";
   productPrice.value = "";
-  productType.value = "";
-  productCaliber.value = "";
-  Descriptions.value = "";
+  productDescription.value = "";
+  productCapacity.value = "";
+  productRounds.value = "";
 }
 
-
-//Add Product Function
+// Add Product Function
 async function AddProduct() {
   let product = {
     name: productName.value,
     price: productPrice.value,
-    type: productType.value,
+    type: document.querySelector('input[name="productType"]:checked').value,
     caliber: productCaliber.value,
-    description: Descriptions.value,
+    description: productDescription.value,
     capacity: productCapacity.value,
     Action: productAction.value,
     Rounds: productRounds.value
@@ -52,20 +48,37 @@ async function AddProduct() {
     body: JSON.stringify(product)
   });
   console.log(response);
+  data = await response.json();
+  let isCreated = response.status == 201? true : false;
+  ShowMsg(data, isCreated);
   ClearData();
-  ShowSuccessMsg();
-
 }
-//Submit Product Action 
+
+// Submit Product Action 
 document.querySelector('#productSubmition').addEventListener('click', AddProduct);
 
-function Validation() {
-  if (productName.value == "" || productPrice.value == "" || productType.value == "" || productCaliber.value == "") {
-    document.getElementById("#productSubmition").setAttribute("disabled")
+// Shows Message Based on Response
+function ShowMsg(data, isCreated){
+  if(isCreated){
+    $("#Msg").html(data);
+    $("#Msg").addClass('alert-success border-success');
+    $("#Msg").removeClass('alert-danger border-danger');
+    $("#Msg").fadeIn(300).delay(1500).fadeOut(400);
   }
-  else {
-    document.getElementById("submit").removeAttribute("disabled")
+  else{
+    $("#Msg").html('Error');
+    $("#Msg").addClass('alert-danger border-danger');
+    $("#Msg").removeClass('alert-success border-success');
+    $("#Msg").fadeIn(300).delay(1500).fadeOut(400);
 
   }
 }
-//please restore! :_)
+
+// function Validation() {
+//   if (productName.value == "" || productPrice.value == "" || productType.value == "" || productCaliber.value == "") {
+//     document.getElementById("#productSubmition").setAttribute("disabled")
+//   }
+//   else {
+//     document.getElementById("submit").removeAttribute("disabled")
+//   }
+// }

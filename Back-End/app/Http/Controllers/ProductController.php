@@ -19,7 +19,8 @@ class ProductController extends Controller
     $product = Product::findOrFail($id);
     return response()->json($product, 200);
   }
-
+  
+  // Gets List of Products by Their Type
   public function showt($type)
   {
    $product= Product::where('type', $type)->get();

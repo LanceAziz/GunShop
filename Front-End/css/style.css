@@ -404,3 +404,7 @@ span,
   --dd-selectedBackground: var(--dd-gradient);
   --dd-confirmButtonBackground: var(--dd-gradient);
 }
+
+#Msg{
+  display: none;
+}
