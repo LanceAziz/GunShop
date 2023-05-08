@@ -69,3 +69,48 @@ function Validation() {
   }
 }
 //please restore! :_)
+
+
+
+//Products
+var link = document.querySelectorAll(".ph3")
+    for(var i=0;i<link.length;i++)
+    {
+    link[i].addEventListener("click",function(e){
+        var currentMeal=e.target.text;
+      getproudect(currentMeal);
+    })
+   }
+    var recipes =[];
+    function getproudect(pro)
+    {
+        var httpRequest=new XMLHttpRequest();
+        httpRequest.open("Get",`http://localhost/GunShop/Back-End/public/api/product/showType/${pro}`);
+        httpRequest.send();
+        
+        httpRequest.addEventListener("readystatechange",function(){
+            if(httpRequest.readyState==4)
+            {
+                recipes=JSON.parse(httpRequest.response);
+                displayRecipes()
+            }
+        })
+    }
+    function displayRecipes()
+    {
+        var cols ='';
+        for(var i=0;i<recipes.length;i++)
+        {
+            cols+=
+            `
+            <div class="col-md-3">
+            <div class="">
+            <h3>id</h3>
+            <h5> title </h5>
+            <p> ${recipes[i].id}} </p>
+            </div>
+            </div>
+            `
+        }
+        document.getElementById("id dev").innerHTML=cols;
+    }
