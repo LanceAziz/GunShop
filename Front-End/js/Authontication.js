@@ -153,13 +153,3 @@ async function login() {
     }
     ClearDataAuth('login');
 }
-
-async function get(){
-    const api ="http://localhost/GunShop/Back-End/public/api/product/showType/x"
-    const response = await fetch (api)
-    const date = await response.json();
-    console.log(data)
-
-    document.querySelector("#content")
-}
-get()

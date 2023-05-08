@@ -1,10 +1,10 @@
 // API
-(async function getProducts() {
-    var response = await fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=713e5b505cc52f5aa68161a6f9c471c1`);
-    var finalResponse = await response.json();
-    diaplayProduct(finalResponse.results);
-    console.log(products);
-})()
+// (async function getProducts() {
+//     var response = await fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=713e5b505cc52f5aa68161a6f9c471c1`);
+//     var finalResponse = await response.json();
+//     diaplayProduct(finalResponse.results);
+//     console.log(products);
+// })()
 function diaplayProduct(products) {
     var temp = ``;
     for (let i = 0; i < products.length; i++) {
@@ -48,27 +48,31 @@ var link = document.querySelectorAll(".ph3")
 for (var i = 0; i < link.length; i++) {
   link[i].addEventListener("click", function (e) {
     var currentMeal = e.target.text;
+    console.log(currentMeal);
     getproudect(currentMeal);
   })
 }
 var recipes = [];
-function getproudect(pro) {
-  var httpRequest = new XMLHttpRequest();
-  httpRequest.open("Get", `http://localhost/GunShop/Back-End/public/api/product/showType/${pro}`);
-  httpRequest.send();
+(function getproudect() {
+    console.log(link);
+    var httpRequest = new XMLHttpRequest();
+    httpRequest.open("Get", `http://localhost/GunShop/Back-End/public/api/product/showType/${link.text}`);
+    httpRequest.send();
 
-  httpRequest.addEventListener("readystatechange", function () {
-    if (httpRequest.readyState == 4) {
-      recipes = JSON.parse(httpRequest.response);
-      displayRecipes()
-    }
-  })
-}
+    httpRequest.addEventListener("readystatechange", function () {
+        if (httpRequest.readyState == 4) {
+            console.log(httpRequest.response);
+            recipes = JSON.parse(httpRequest.response);
+            console.log(recipes);
+            //   displayRecipes()
+        }
+    })
+})()
 function displayRecipes() {
-  var cols = '';
-  for (var i = 0; i < recipes.length; i++) {
-    cols +=
-      `
+    var cols = '';
+    for (var i = 0; i < recipes.length; i++) {
+        cols +=
+            `
             <div class="col-md-3">
             <div class="">
             <h3>id</h3>
@@ -77,7 +81,7 @@ function displayRecipes() {
             </div>
             </div>
             `
-  }
-  document.getElementById("id dev").innerHTML = cols;
+    }
+    document.getElementById("id dev").innerHTML = cols;
 }
 
