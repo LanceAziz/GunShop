@@ -25,7 +25,7 @@
                     <div class="d-flex position-relative">
                         <i id='btnCart' class="fa-solid fa-cart-shopping p-2 pe-4 fs-5 rounded-0 cart-ani"><span class="position-absolute top-0 start-50  badge rounded-circle bg-danger p-1"><span class="visually-hidden">unread messages</span></span></i>
                     </div>
-                    <button id='logoutUser' class="btn border-start-0 border-end-0 rounded-0 btn-primary fa-sm py-3 px-4 d-none">Log Out</button>
+                    <button id='logoutUser' onclick='LogOut()' class="btn border-start-0 border-end-0 rounded-0 btn-primary fa-sm py-3 px-4 d-none">Log Out</button>
                     <button id='signinUser' onclick="window.location.href = 'login.html';" class="btn border-start-0 border-end-0 rounded-0 btn-primary fa-sm py-3 px-4 d-none">Sign In</button>
                 </div>
             </div>
@@ -83,42 +83,62 @@ console.log(user);
 
 
 (function uiManip() {
-    console.log(user.is_admin);
-    // var editPrd = document.getElementsByClassName('editPrd');
-    // var deletePrd = document.getElementById('deletePrd');
-    var addPrd = document.getElementById('addPrd');
-    // var infoPrd = document.getElementById('infoPrd');
-    var signinUser = document.getElementById('signinUser');
-    var logoutUser = document.getElementById('logoutUser');
-    // var addCart = document.getElementById('addCart');
-    // var removeCart = document.getElementById('removeCart');
-    var btnCart = document.getElementById('btnCart');
-    console.log(logoutUser);
+    console.log(user);
+    var signinUser = document.getElementById('signinUser').classList;
+    var logoutUser = document.getElementById('logoutUser').classList;
+    var btnCart = document.getElementById('btnCart').classList;
+    if (window.location.href == 'addForm.html') {
+        var addPrd = document.getElementById('addPrd').classList;
+        // var editPrd = document.getElementsByClassName('editPrd').classList;
+        // var deletePrd = document.getElementById('deletePrd').classList;
+        // var infoPrd = document.getElementById('infoPrd').classList;
+        // var addCart = document.getElementById('addCart').classList;
+        // var removeCart = document.getElementById('removeCart').classList;
+    }
 
-
-    //Authontication manipulation UI
-    if (user.is_admin) {
-        console.log("i am a fuckin admin");
-        signinUser.classList.add('d-none')
-        logoutUser.classList.remove('d-none')
-        btnCart.classList.add('d-none')
-        addPrd.classList.remove('d-none')
-        // editPrd.classList.remove('d-none')
-        // deletePrd.classList.remove('d-none')
-        // infoPrd.classList.remove('d-none')
-        // addCart.classList.add('d-none')
-        // removeCart.classList.add('d-none')
+    //Authontication manipulation UI    
+    if (user == null) {
+        console.log('in');
+        signinUser.remove('d-none')
+        logoutUser.add('d-none')
+        btnCart.add('d-none')
+        if (window.location.href == 'addForm.html') {
+            addPrd.add('d-none');
+        }
     }
     else {
-        signinUser.classList.add('d-none')
-        logoutUser.classList.remove('d-none')
-        console.log(logoutUser);
-        btnCart.classList.remove('d-none')
-        addPrd.classList.add('d-none')
-        // editPrd.classList.add('d-none')
-        // deletePrd.classList.add('d-none')
-        // infoPrd.classList.remove('d-none')
-        // addCart.classList.remove('d-none')
-        // removeCart.classList.remove('d-none')
+        if (user.is_admin) {
+            console.log("i am a fuckin admin");
+            signinUser.add('d-none')
+            logoutUser.remove('d-none')
+            btnCart.add('d-none')
+            if (window.location.href == 'addForm.html') {
+                addPrd.remove('d-none')
+                // editPrd.remove('d-none')
+                // deletePrd.remove('d-none')
+                // infoPrd.remove('d-none')
+                // addCart.add('d-none')
+                // removeCart.add('d-none')
+            }
+        }
+        else {
+            signinUser.add('d-none')
+            logoutUser.remove('d-none')
+            btnCart.remove('d-none')
+            if (window.location.href == 'addForm.html') {
+                addPrd.add('d-none')
+                // editPrd.add('d-none')
+                // deletePrd.add('d-none')
+                // infoPrd.remove('d-none')
+                // addCart.remove('d-none')
+                // removeCart.remove('d-none')
+            }
+        }
+
     }
 })()
+
+function LogOut(){
+    localStorage.removeItem('user');
+    window.location.href="index.html";
+}
