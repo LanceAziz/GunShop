@@ -8,7 +8,7 @@ let lPassword = document.getElementById("passwordLID");
 let button = document.getElementById("reg-btn");
 
 // The Logged Use;
-let loggedUser;
+var loggedUser;
 
 // Clear Authentication Forms
 function ClearDataAuth(func) {
@@ -17,7 +17,7 @@ function ClearDataAuth(func) {
         lPassword.value = "";
 
     }
-    else { 
+    else {
         rUsername.value = "";
         rPassword.value = "";
         birthdate.value = "";
@@ -95,34 +95,34 @@ function validateLicense() {
     return replacer(license, /^[A-Za-z0-9]{15}$/)
 }
 function validateBirthdate() {
-    return replacer(birthdate, /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(19[4-9][0-9]|200[0-5])$/)
+    return replacer(birthdate, /^(19[4-9]\d|200[0-5])-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/ )
 }
 
 // Resigter Function
 async function register() {
-        // Get The Form Values in a User Object
-        let user = {
-            name: rUsername.value,
-            password: rPassword.value,
-            birthdate: birthdate.value,
-            license: license.value
-        }
-        // Posting User to the API
-        var response = await fetch(`http://localhost/GunShop/Back-End/public/api/register`, {
-            method: "POST",
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(user)
-        });
-        if (response.ok) {
-            loggedUser = await response.json();
-            console.log(loggedUser);
-        }
-        else {
-        }
-        ClearDataAuth('register');
+    // Get The Form Values in a User Object
+    let user = {
+        name: rUsername.value,
+        password: rPassword.value,
+        birthdate: birthdate.value,
+        license: license.value
+    }
+    // Posting User to the API
+    var response = await fetch(`http://localhost/GunShop/Back-End/public/api/register`, {
+        method: "POST",
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(user)
+    });
+    if (response.ok) {
+        loggedUser = await response.json();
+        console.log(loggedUser);
+    }
+    else {
+    }
+    ClearDataAuth('register');
 }
 // Login Function
 async function login() {
@@ -143,7 +143,9 @@ async function login() {
         loggedUser = await response.json();
         console.log(loggedUser);
         document.querySelector('.valid-user').innerHTML = `Welcome ${loggedUser.name}`;
+        localStorage.setItem('user', JSON.stringify(loggedUser));
         $(".valid-user").fadeIn(300).delay(1500).fadeOut(400);
+        window.location.href = 'index.html';
     }
     else {
         error = await response.json();
