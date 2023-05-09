@@ -118,6 +118,7 @@ async function register() {
     });
     if (response.ok) {
         loggedUser = await response.json();
+        window.location.href = 'login.html';
         console.log(loggedUser);
     }
     else {
